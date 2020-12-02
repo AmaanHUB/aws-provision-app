@@ -17,7 +17,7 @@ sudo apt install $(echo ${ubuntu_packages[*]}) -y
 
 # needs an if statement to not do this if already in .bashrc
 # used for choosing the correct terminal in ssh and allow to do commands like clear
-echo "export TERM='vt100'" >> ~/.bashrc
+echo "export TERM=vt100" >> ~/.bashrc
 source ~/.bashrc
 
 # Set up the reverse proxy with nginx
@@ -45,4 +45,5 @@ sudo npm install pm2 -g
 # update-env updates environment variables to be used by vagrant
 cd ~/aws-provision-app/app/
 
+npm install
 pm2 start app.js --update-env

@@ -2,11 +2,22 @@
 
 ## What Is The Cloud?
 
+* Remote server/s that either store and manage data, run applications, or deliver content or a service such as streaming videos, emal, or office productivity software
+
 ## What Is AWS?
+
+* AWS is the most used provider of cloud computing services by far, and offers a wide variety of specialised services
 
 ## EC2
 
+* Amazon Elastic Compute Cloud (Amazon EC2) provides scalable computing capacity in the Amazon Web Services (AWS) Cloud
+* Using Amazon EC2 eliminates your need to invest in hardware up front, so you can develop and deploy applications faster
+* Amazon EC2 enables you to scale up or down to handle changes in requirements or spikes in popularity, reducing your need to forecast traffic
+
 ## Security Groups (SG)
+
+* Allows to assign certain inbound and outbound rules on specified ports
+	* .e.g. only a certain IP can access port 22
 
 ### Ports
 
@@ -45,3 +56,9 @@ rsync -avz ~/test/* ubuntu@<ip>:/directory/
 	* See the app on `public-ip`
 
 ### pics
+
+* Showing at port 3000 (as without the reverse proxy by nginx):
+![](images/Port-3000.png)
+
+* At port 80:
+![](images/Port-80.png)
