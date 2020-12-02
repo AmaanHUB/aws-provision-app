@@ -16,7 +16,19 @@
 
 ## Sending Files
 
-* rsync
+* Tend to be sent with the `rsync` command
+* Basic syntax:
+```
+rsync [options] [location] [destination]
+```
+* If using a new private key, one has to specify it with the `-e` option .e.g.
+```
+rsync -e "ssh -i ~/key_location" [location] [destination]
+```
+* Multiple files can be sent with either wild cards or just specifying a directory .e.g.
+```
+rsync -avz ~/test/* ubuntu@<ip>:/directory/
+```
 
 ## Getting App Running
 
