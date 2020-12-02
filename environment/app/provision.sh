@@ -18,6 +18,7 @@ sudo apt install $(echo ${ubuntu_packages[*]}) -y
 # needs an if statement to not do this if already in .bashrc
 # used for choosing the correct terminal in ssh and allow to do commands like clear
 echo "export TERM='vt100'" >> ~/.bashrc
+source ~/.bashrc
 
 # Set up the reverse proxy with nginx
 # Unlink this default config file
