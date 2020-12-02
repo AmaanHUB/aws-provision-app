@@ -37,10 +37,9 @@ sudo npm install pm2 -g
 # Setting bash env
 #echo "export DB_HOST='192.168.33.20'" >> ~/.bashrc
 
-# copy app folder to root
-# sudo cp -R ~/app /
-# go to app and run
-# cd /app
+# needs an if statement to not do this if already in .bashrc
+# used for choosing the correct terminal in ssh and allow to do commands like clear
+echo "export TERM='vt100'" >> ~/.bashrc
 
 # update-env updates environment variables to be used by vagrant
 cd ~/aws-provision-app/app/
