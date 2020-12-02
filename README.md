@@ -55,7 +55,7 @@ rsync -avz ~/test/* ubuntu@<ip>:/directory/
 	* Run the app with `pm2`
 	* See the app on `public-ip`
 
-### pics
+### Images
 
 * Showing at port 3000 (as without the reverse proxy by nginx):
 ![](images/Port-3000.png)
