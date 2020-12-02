@@ -20,7 +20,8 @@ sudo apt install $(echo ${ubuntu_packages[*]}) -y
 sudo unlink /etc/nginx/sites-enabled/default
 
 # Copy made nginx file to the correct place
-sudo cp ~/nginx/proxy_config.conf /etc/nginx/sites-available/proxy_config.conf
+cd ~/aws-provision-app
+sudo cp nginx/proxy_config.conf /etc/nginx/sites-available/proxy_config.conf
 
 # Sort out the activation with this soft link, so on by default
 # Don't link from the configs file just cause this location is where
@@ -37,9 +38,11 @@ sudo npm install pm2 -g
 #echo "export DB_HOST='192.168.33.20'" >> ~/.bashrc
 
 # copy app folder to root
-sudo cp -R ~/app /
+# sudo cp -R ~/app /
 # go to app and run
-cd /app
+# cd /app
 
 # update-env updates environment variables to be used by vagrant
+cd ~/aws-provision-app/app/
+
 pm2 start app.js --update-env
