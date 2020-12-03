@@ -17,7 +17,11 @@ sudo apt install $(echo ${ubuntu_packages[*]}) -y
 
 # needs an if statement to not do this if already in .bashrc
 # used for choosing the correct terminal in ssh and allow to do commands like clear
-echo "export TERM=vt100" >> ~/.bashrc
+if grep -xq "export TERM=vt100" ~/.bashrc; then
+	echo "Already here"
+else
+	echo "export TERM=vt100" >> ~/.bashrc
+fi
 source ~/.bashrc
 
 # Set up the reverse proxy with nginx
@@ -40,7 +44,11 @@ sudo systemctl restart nginx.service
 sudo npm install pm2 -g
 
 # Setting bash env (CHANGE THE IP)
-echo "export DB_HOST='54.154.161.202'" >> ~/.bashrc
+if grep -xq "export DB_HOST='54.154.161.202'" ~/.bashrc; then
+	echo "Already here"
+else
+	echo "export DB_HOST='54.154.161.202'" >> ~/.bashrc
+fi
 source ~/.bashrc
 
 # update-env updates environment variables to be used by vagrant
