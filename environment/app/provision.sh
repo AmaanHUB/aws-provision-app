@@ -39,11 +39,13 @@ sudo systemctl restart nginx.service
 # Install pm2 with npm
 sudo npm install pm2 -g
 
-# Setting bash env
+# Setting bash env (CHANGE THE IP)
 #echo "export DB_HOST='192.168.33.20'" >> ~/.bashrc
 
 # update-env updates environment variables to be used by vagrant
 cd ~/aws-provision-app/app/
 
 npm install
+# May need to specify with DB_HOST too here when connecting databases
+# may need to npm start instead too on aws
 pm2 start app.js --update-env
