@@ -50,4 +50,4 @@ npm install
 # May need to specify with DB_HOST too here when connecting databases
 # may need to npm start instead too on aws
 pm2 delete app
-pm2 start app.js --update-env
+DB_HOST=54.154.161.202 pm2 start app.js --update-env
