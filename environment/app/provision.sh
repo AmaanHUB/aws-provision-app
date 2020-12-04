@@ -13,7 +13,7 @@ sudo apt update && sudo apt upgrade -y
 ubuntu_packages=(nginx git nodejs)
 
 # declare an IP address for the DB_HOST
-export DB_IP="52.48.44.253"
+export DB_IP="34.241.241.233"
 
 # install all from array
 sudo apt install $(echo ${ubuntu_packages[*]}) -y
