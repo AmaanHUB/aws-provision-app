@@ -62,3 +62,4 @@ npm install
 # may need to npm start instead too on aws
 pm2 delete app
 DB_HOST='${DB_IP}' pm2 start app.js --update-env
+pm2 restart app --update-env
