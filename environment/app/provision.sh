@@ -47,10 +47,10 @@ sudo systemctl restart nginx.service
 sudo npm install pm2 -g
 
 # Setting bash env (CHANGE THE IP)
-if grep -xq "export DB_HOST" then
+if grep -xq "export DB_HOST" ~/.bashrc; then
 	echo "Already here"
 else
-	echo "export DB_HOST='${DB_IP}'" >> ~/.bashrc
+	echo "export DB_HOST=${DB_IP}" >> ~/.bashrc
 fi
 source ~/.bashrc
 
