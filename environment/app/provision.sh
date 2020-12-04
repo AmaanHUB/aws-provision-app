@@ -13,7 +13,7 @@ sudo apt update && sudo apt upgrade -y
 ubuntu_packages=(nginx git nodejs)
 
 # declare an IP address for the DB_HOST
-DB_IP="52.48.44.253"
+export DB_IP="52.48.44.253"
 
 # install all from array
 sudo apt install $(echo ${ubuntu_packages[*]}) -y
@@ -50,7 +50,7 @@ sudo npm install pm2 -g
 if grep -xq "export DB_HOST" then
 	echo "Already here"
 else
-	echo "export DB_HOST='$DB_IP'" >> ~/.bashrc
+	echo "export DB_HOST='${DB_IP}'" >> ~/.bashrc
 fi
 source ~/.bashrc
 
