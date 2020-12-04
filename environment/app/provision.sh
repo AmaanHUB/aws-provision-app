@@ -50,7 +50,7 @@ sudo npm install pm2 -g
 if grep -xq "export DB_HOST" ~/.bashrc; then
 	echo "Already here"
 else
-	echo "export DB_HOST=${DB_IP}" >> ~/.bashrc
+	echo "export DB_HOST='${DB_IP}'" >> ~/.bashrc
 fi
 source ~/.bashrc
 
@@ -61,4 +61,4 @@ npm install
 # May need to specify with DB_HOST too here when connecting databases
 # may need to npm start instead too on aws
 pm2 delete app
-DB_HOST=$DB_IP pm2 start app.js --update-env
+DB_HOST='${DB_IP}' pm2 start app.js --update-env
